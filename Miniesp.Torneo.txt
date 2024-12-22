@@ -1,0 +1,72 @@
+  Algoritmo TORNEO_NATACION_NACIONAL
+    Clase Torneo
+      1.  Declarar variables
+          categoríaNado: Cadena
+          participantes: <<Arreglo>>[n] Participante
+      2.  Metodo Torneo(cate: Cadena, arregloParticipantes[]: <<Arreglo>> Participante)
+          a.  categoríaNado = cate
+          b.  participantes = arregloParticipantes[]
+          c.  Fin Metodo Torneo
+      3.  Metodo toString(): Cadena
+          a.  mensaje: Cadena
+          b.  mensaje=”Categoria Nado: ” ,obtenerCategoriaNado(), “,Participantes: ” ,obtenerParticipantes(): <<Arreglo>> [] Participante
+          c.  return mensaje
+          d.  Fin Metodo toString
+    Fin Clase Torneo
+    Clase Participante
+      1.  Declarar variables
+          nomParticipante: Cadena
+          tiempoClasificacion: real
+          tiempoFinal: real
+          promedioTiempo: real
+      2.  Metodo Participante(nom: Cadena, tClas: real, tFinal: real, pro: real)
+          a.  nomParticipante = nom
+          b.  tiempoClasificacion = tClas
+          c.  tiempoFinal = fFinal
+          d.  Fin Metodo Participante
+      3.  Metodo toString()
+          a.  mensaje: Cadena
+          b.  mensaje= “Nombre participante: ” ,obtenerNomParticipante(), “,Tiempo Clasificacion: ” ,obtenerTiempoClasificacion(), “,Tiempo Final: ” ,obtenerTiempoFinal(), “Promedio de Tiempo: ” ,obtenerPromedioTiempo
+          c.  return mensaje
+          d.  Fin Metodo toString
+      4.  Metodo calcularPromedioTiempo()
+          a.  promedioTiempo = (tiempoClasificacion + tiempoFinal)/2
+          b.  Fin Metodo calcularPromedioTiempo
+    Fin Clase Participante
+    Clase PruebaTorneo
+      1.  Metodo principal()
+          a.  Declarar variables
+              nombrePart1: Cadena
+              nombrePart2: Cadena
+              tiempCla1: real
+              tiempCla2: real
+              tiempFin1: real
+              tiempFin2: real
+
+              categNado: Cadena
+              lista_participantes: <<Arreglo>>[n] Participante
+
+          b.  Asignar Valores
+              nombrePart1 = “Julio Cesar”
+              nombrePart2 = “Mario Rodrigez”
+              tiempCla1 = 53.3
+              tiempCla2 = 45.9
+              tiempFin1 = 56.2
+              tiempFin2 = 50.6
+
+              categNado = “Estilo Libre”
+              lista_participantes[2] = {participante1, participante2}
+
+          c.  Declarar, crear e inicializar objetos
+              Participante participante1 = new Particpante(nombrePart1, tiempCla1, tiempFin1)
+              Participante participante2 = new Particpante(nombrePart2, tiempCla2, tiempFin2)
+
+              Torneo torneo = new Torneo(categNado, lista_participantes)
+
+          d.  for int i=0; i<torneo.Longitud(lista_participantes); i++
+Torneo.lista_participantes[i].calcularPromedioTiempo()
+          e.	endfor
+
+          f.	Imprimir torneo.toString()
+    Fin Clase PruebaTorneo
+  Fin
